@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soporte Frogy_System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <style>
+    body {
+    background-color: #f6f6f6;
+    font-family: "Karla";
+    margin: 0em;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-flow: row;
+    align-content: space-around;
+    justify-content: center;
+    margin: 8em auto 5em auto;
+}
+
+article {
+    position: relative;
+    background-color: white;
+    border-radius: 0.25em;
+    width: 20%;
+    min-width: 8em;
+    max-width: 14em;
+    padding: 2em;
+    padding-bottom: 1.2em;
+    margin: 1em;
+    box-shadow: 0em 0em 1.5em rgba(0,0,0,.1);
+    overflow: hidden;
+    transition: ease;
+    transition-duration: .6s;
+}
+
+article:hover {
+    cursor: pointer;
+}
+
+/* TARJETA 1 */
+
+#t1:hover {
+    box-shadow: 0 .2em .2em #afafaf;
+    transform: scale(.97);
+    transition: ease;
+    transition-duration: .4s;
+}
+
+#t1:hover section:nth-child(2) svg {
+    transform: translateX(-7em) rotate(240deg);
+    transition: ease;
+    transition-duration: .4s;
+}
+
+#t1:hover section:nth-child(2) h1 {
+    transform: scale(0.5);
+    opacity: 0;
+    transition: ease;
+    transition-duration: .3s;
+}
+
+#t1:hover section:nth-child(2) p {
+    transform: translate3d(3em, 0em, 20em);
+    opacity: 0;
+    transition: ease;
+    transition-duration: .3s;
+}
+
+#t1:hover section:first-child {
+    opacity: 1;
+    top: 0;
+    transition: ease;
+    transition-duration: .4s;
+    transition-delay: .2s;
+}
+
+/* TARJETA 2 */
+
+#t2:hover {
+    transform: rotate(360deg) scale(.97);
+    transition: ease;
+    transition-duration: .6s;
+    transition-delay: .1s;
+    box-shadow: 0 .2em .2em #afafaf;
+}
+
+#t2 section:first-child {
+    top: 0;
+    opacity: 0;
+}
+
+#t2:hover section:first-child {
+    opacity: 1;
+    top: 0;
+    transition-delay: .2s;
+}
+
+#t2:hover section:first-child h1 {
+    transition: ease;
+    transform: translate(0em);
+    transition-duration: .5s;
+    transition-delay: .5s;
+}
+
+#t2 section:first-child h1 {
+    transition: ease;
+    transform: translate(5em);
+    transition-duration: .5s;
+}
+
+#t2:hover section:first-child p {
+    transition: ease;
+    transform: translate(0em);
+    transition-duration: .5s;
+    transition-delay: .5s;
+}
+
+#t2 section:first-child p {
+    transition: ease;
+    transform: translate(-25em);
+    transition-duration: .5s;
+}
+
+#t2:hover section:nth-child(2) {
+    opacity: 0;
+    transition: ease;
+    transition-duration: .2s;
+    transition-delay: .1s;
+}
+
+/* TARJETA 3 */
+
+#t3:hover {
+    box-shadow: 0 .2em .2em #afafaf;
+    transform: scale(.97);
+    transition: ease;
+    transition-duration: .4s;
+}
+
+#t3:hover section:nth-child(2) svg {
+    transform: scaleY(.1) translate(16em);
+    transition: ease;
+    transition-duration: .2s;
+    transition-delay: .1s;
+}
+
+#t3:hover section:nth-child(2) h1 {
+    transform: scaleY(.1) translate(16em);
+    transition: ease;
+    transition-duration: .2s;
+    transition-delay: .2s;
+}
+
+#t3:hover section:nth-child(2) p {
+    transform: scaleY(.1) translate(16em);
+    transition: ease;
+    transition-duration: .2s;
+    transition-delay: .3s;
+}
+
+#t3:hover section:nth-child(2) p.calculate {
+    transform: scaleY(.1) translate(16em);
+    transition: ease;
+    transition-duration: .2s;
+    transition-delay: .4s;
+}
+
+#t3 section:nth-child(2) svg, 
+#t3 section:nth-child(2) h1, 
+#t3 section:nth-child(2) p, 
+#t3 section:nth-child(2) p.calculate {
+    transition: ease;
+    transition-duration: .4s;
+    transition-delay: .2s;
+}
+
+#t3 section:first-child {
+    border-radius: 20em;
+    top: 0;
+    left: 100%;
+    scale: .2;
+}
+
+#t3:hover section:first-child {
+    opacity: 1;
+    top: 0;
+    transition-delay: .6s;
+    border-radius: 0.25em;
+    left: 0;
+}
+
+
+
+
+
+section {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+section:first-child {
+    position: absolute;
+    top: 100%;
+    margin: 0em;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.25em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    transition-duration: .4s;
+}
+
+section:first-child p {
+    margin: 0em 2em;
+    text-align: center;
+}
+
+section:first-child h1 {
+    margin: 2rem 0;
+}
+
+#magenta {
+    background-color: #ffffff;
+}
+
+#cyan {
+    background-color: rgb(141, 233, 233);
+}
+
+#yellow {
+    background-color: rgb(255, 230, 0);
+}
+
+section:first-child h1 {
+    font-size: 4em;
+    text-align: center;
+    font-weight: bold;
+}
+
+svg {
+    width: 3em;
+    height: 3em;
+    fill: #8c8cff;
+    transition-duration: .6s;
+}
+
+h1 {
+    font-family: "Barlow";
+    font-weight: normal;
+    font-size: 1.5em;
+    margin-top: 2em;
+    transition: ease;
+    transition-duration: .3s;
+}
+
+p {
+    margin-bottom: 3em;
+    margin-top: 0em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.calculate {
+    color: #4444ff;
+    border-top: #dfdfdf;
+    margin-bottom: 0em;
+    border-top-width: 0.05em;
+    border-top-style: solid;
+    padding-top: 1em;
+}
+  </style>
+  <body>
+    <main>
+        <article id="t1">
+            <section id="magenta">
+                <img src="dist/img/cris.png" alt="">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Contactame
+                  </button>
+            </section>
+            <section>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                viewBox="0 0 41.5 41.5" enable-background="new 0 0 41.5 41.5" xml:space="preserve">
+                    <g>
+                      <path id="layer1" d="M31,0.5l10.2,10.2V0.5H31z M41.2,31L31,41.1h10.2V31z M10.7,41.1L0.5,31v10.2H10.7z M0.5,10.6L10.7,0.5H0.5
+                        V10.6z M33.4,8.2c-6.9-6.9-18.2-6.9-25.1,0s-6.9,18.2,0,25.1s18.2,6.9,25.1,0S40.3,15.2,33.4,8.2z M30.6,30.6
+                        c-5.4,5.4-14.1,5.4-19.6,0s-5.4-14.1,0-19.6s14.1-5.4,19.6,0S36,25.2,30.6,30.6z"/>
+                  </g>
+                </svg>
+                <h1>Administrador de base de datos</h1>
+                <p>Ing. Christian Ganzo</p>
+            </section>
+        </article>
+        <article id="t1">
+            <section id="magenta">
+                <img src="dist/img/arturo.png" alt="">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    Contactame
+                  </button>
+            </section>
+            <section>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                viewBox="0 0 41.5 41.5" enable-background="new 0 0 41.5 41.5" xml:space="preserve">
+                    <g>
+                      <path id="layer1" d="M31,0.5l10.2,10.2V0.5H31z M41.2,31L31,41.1h10.2V31z M10.7,41.1L0.5,31v10.2H10.7z M0.5,10.6L10.7,0.5H0.5
+                        V10.6z M33.4,8.2c-6.9-6.9-18.2-6.9-25.1,0s-6.9,18.2,0,25.1s18.2,6.9,25.1,0S40.3,15.2,33.4,8.2z M30.6,30.6
+                        c-5.4,5.4-14.1,5.4-19.6,0s-5.4-14.1,0-19.6s14.1-5.4,19.6,0S36,25.2,30.6,30.6z"/>
+                  </g>
+                </svg>
+                <h1>Supervisor de programación</h1>
+                <p>Ing. Aarón Romero</p>
+            </section>
+        </article>
+        <article id="t1">
+            <section id="magenta">
+                <img src="dist/img/citlali.png" alt="">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    Contactame
+                  </button>
+            </section>
+            <section>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                viewBox="0 0 41.5 41.5" enable-background="new 0 0 41.5 41.5" xml:space="preserve">
+                    <g>
+                      <path id="layer1" d="M31,0.5l10.2,10.2V0.5H31z M41.2,31L31,41.1h10.2V31z M10.7,41.1L0.5,31v10.2H10.7z M0.5,10.6L10.7,0.5H0.5
+                        V10.6z M33.4,8.2c-6.9-6.9-18.2-6.9-25.1,0s-6.9,18.2,0,25.1s18.2,6.9,25.1,0S40.3,15.2,33.4,8.2z M30.6,30.6
+                        c-5.4,5.4-14.1,5.4-19.6,0s-5.4-14.1,0-19.6s14.1-5.4,19.6,0S36,25.2,30.6,30.6z"/>
+                  </g>
+                </svg>
+                <h1>Diseñador de interfaces</h1>
+                <p>Ing. Citlali Chávez</p>
+            </section>
+        </article>
+        <article id="t1">
+            <section id="magenta">
+                <img src="dist/img/mari.png" alt="">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                    Contactame
+                  </button>
+            </section>
+            <section>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                viewBox="0 0 41.5 41.5" enable-background="new 0 0 41.5 41.5" xml:space="preserve">
+                    <g>
+                      <path id="layer1" d="M31,0.5l10.2,10.2V0.5H31z M41.2,31L31,41.1h10.2V31z M10.7,41.1L0.5,31v10.2H10.7z M0.5,10.6L10.7,0.5H0.5
+                        V10.6z M33.4,8.2c-6.9-6.9-18.2-6.9-25.1,0s-6.9,18.2,0,25.1s18.2,6.9,25.1,0S40.3,15.2,33.4,8.2z M30.6,30.6
+                        c-5.4,5.4-14.1,5.4-19.6,0s-5.4-14.1,0-19.6s14.1-5.4,19.6,0S36,25.2,30.6,30.6z"/>
+                  </g>
+                </svg>
+                <h1>Coordinador de documentación</h1>
+                <p>Ing. Maria Ignot</p>
+            </section>
+        </article>
+    </main>
+      <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Te contactaremos en la brevedad</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="https://formsubmit.co/chr11122002@gmail.com" method="post">
+            <div class="mb-3">
+                <input type="text" name="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Nombre completo" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" name="correo" class="form-control" id="exampleFormControlInput1" placeholder="Correo electronico" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="telefono" class="form-control" id="exampleFormControlInput1" placeholder="Numero de telefono" required>
+              </div>
+              <div class="mb-3">
+                <textarea type="text" name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Asunto..." required></textarea>
+              </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel2">Te contactaremos en la brevedad</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="https://formsubmit.co/arturoaaron2@gamil.com" method="post">
+            <div class="mb-3">
+                <input type="text" name="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Nombre completo" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" name="correo" class="form-control" id="exampleFormControlInput1" placeholder="Correo electronico" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="telefono" class="form-control" id="exampleFormControlInput1" placeholder="Numero de telefono" required>
+              </div>
+              <div class="mb-3">
+                <textarea type="text" name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Asunto..." required></textarea>
+              </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel3">Te contactaremos en la brevedad</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="https://formsubmit.co/chavezcitlali833@gmail.com" method="post">
+            <div class="mb-3">
+                <input type="text" name="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Nombre completo" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" name="correo" class="form-control" id="exampleFormControlInput1" placeholder="Correo electronico" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="telefono" class="form-control" id="exampleFormControlInput1" placeholder="Numero de telefono" required>
+              </div>
+              <div class="mb-3">
+                <textarea type="text" name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Asunto..." required></textarea>
+              </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel4">Te contactaremos en la brevedad</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="https://formsubmit.co/mariacas2113@gmail.com" method="post">
+            <div class="mb-3">
+                <input type="text" name="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Nombre completo" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" name="correo" class="form-control" id="exampleFormControlInput1" placeholder="Correo electronico" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="telefono" class="form-control" id="exampleFormControlInput1" placeholder="Numero de telefono" required>
+              </div>
+              <div class="mb-3">
+                <textarea type="text" name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Asunto..." required></textarea>
+              </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
